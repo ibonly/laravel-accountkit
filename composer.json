@@ -1,0 +1,36 @@
+{
+    "name": "ibonly/facebook-account-kit",
+    "description": "Two factor authentication using facebook account kit",
+    "keywords": ["php","github", "laravel", "facebook", "Open Source", "login", "register", "accountkit", "account kit", "facebook account kit", "laravel facebook account kit", "laravel-accountkit"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ibraheem Adeniyi",
+            "email": "ibonly01@gmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": ["src/"],
+        "psr-4" : {
+            "Ibonly\\AccountKit\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": ["test/"],
+        "psr-4": {
+            "Ibonly\\AccountKit\\Test\\": "test"
+        }
+    },
+    "require": {
+        "php": ">=5.5.9",
+        "mockery/mockery": "^0.9.5",
+        "illuminate/support": "5.2.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "scrutinizer/ocular": "~1.1",
+        "satooshi/php-coveralls": "^1.0",
+        "codeclimate/php-test-reporter": "dev-master",
+        "phpunit/phpcov": "2.*"
+    }
+}
