@@ -13,7 +13,7 @@ namespace Ibonly\FacebookAccountKit;
 
 use Illuminate\Support\ServiceProvider;
 
-class AccountKitServiceProvider extends ServiceProvider
+class FacebookAccountKitServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
