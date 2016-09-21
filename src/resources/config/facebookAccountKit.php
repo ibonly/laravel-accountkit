@@ -10,11 +10,7 @@
  */
 
 return [
-    'senderid' => getenv('ETEXTMAIL_SENDER'),
+    'appId' => getenv('ACCOUNTKIT_APP_ID'),
 
-    'username' => getenv('ETEXTMAIL_EMAIL'),
-
-    'password' => getenv('EXTEXTMAIL_PASSWORD'),
-
-    'url'	   => getenv('ETEXTMAIL_URL'),
+    'appSecret' => getenv('ACCOUNTKIT_APP_SECRET'),
 ];

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ibonly\AccountKit;
+namespace Ibonly\FacebookAccountKit;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -27,10 +27,10 @@ class AccountKitServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $config = realpath(__DIR__ . '/../resources/config/facebook-accountkit.php');
+        $config = realpath(__DIR__ . '/../resources/config/facebookAccountKit.php');
 
         $this->publishes([
-            $config => config_path('facebook-accountkit.php')
+            $config => config_path('facebookAccountKit.php')
         ]);
     }
 
@@ -39,9 +39,9 @@ class AccountKitServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('laravel-accountkit', function() {
+        $this->app->bind('laravel-facebookAccountKit', function() {
 
-            return new AccountKit;
+            return new FacebookAccountKit;
 
         });
     }
@@ -52,6 +52,6 @@ class AccountKitServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['laravel-accountkit'];
+        return ['laravel-facebookAccountKit'];
     }
 }

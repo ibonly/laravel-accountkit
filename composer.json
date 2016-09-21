@@ -13,13 +13,13 @@
     "autoload": {
         "classmap": ["src/"],
         "psr-4" : {
-            "Ibonly\\AccountKit\\": "src/"
+            "Ibonly\\FacebookAccountKit\\": "src/"
         }
     },
     "autoload-dev": {
         "classmap": ["test/"],
         "psr-4": {
-            "Ibonly\\AccountKit\\Test\\": "test"
+            "Ibonly\\FacebookAccountKit\\Test\\": "test"
         }
     },
     "require": {

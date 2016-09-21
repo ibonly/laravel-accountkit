@@ -1,10 +1,10 @@
 <?php
 
-namespace Ibonly\AccountKit;
+namespace Ibonly\FacebookAccountKit;
 
 use Illuminate\Support\Facades\Config;
 
-class AccountKit
+class FacebookAccountKit
 {
 
     protected $tokenUrl;
@@ -14,7 +14,6 @@ class AccountKit
     {
         $this->tokenUrl = 'https://graph.accountkit.com/v1.0/access_token';
         $this->meTokenUrl = 'https://graph.accountkit.com/v1.0/me?access_token=';
-
     }
 
     public function tokenUrl($code, $appId, $appSecret)
@@ -24,12 +23,12 @@ class AccountKit
 
     public function getFacebookAppID()
     {
-        return Config::get('services.facebook.client_id');
+        return Config::get('facebookAccountKit.appId');
     }
 
     public function getFacebookAppSecret()
     {
-        return Config::get('services.facebook.client_secret');
+        return Config::get('facebookAccountKit.appSecret');
     }
 
     public function tokenExchangeEndPoint($code)
