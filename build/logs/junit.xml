@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites>
-  <testsuite name="test" tests="1" assertions="1" failures="0" errors="0" time="0.013350">
-    <testsuite name="Ibonly\AccountKit\Test\AccountKitTest" file="/Users/ibonly/Documents/php/facebook-accountKit/test/AccountKitTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.013350">
-      <testcase name="testShouldGetSenderId" class="Ibonly\AccountKit\Test\AccountKitTest" file="/Users/ibonly/Documents/php/facebook-accountKit/test/AccountKitTest.php" line="34" assertions="1" time="0.013350"/>
-    </testsuite>
-  </testsuite>
-</testsuites>
