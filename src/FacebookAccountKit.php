@@ -22,7 +22,7 @@ class FacebookAccountKit
 
     public function tokenUrl($code, $appId, $appSecret)
     {
-        return $this->accessTokenUrl.'?grant_type=authorization_code&code={$code}&access_token=AA|{$appId}|{$appSecret}';
+        return $this->accessTokenUrl.'?grant_type=authorization_code&code='.$code.'&access_token=AA|'.$appId.'|'.$appSecret;
     }
 
     public function getFacebookAppID()
