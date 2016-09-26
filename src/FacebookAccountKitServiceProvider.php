@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Laravel facebook AccountKit, package.
+ * This file is part of the Laravel Facebook Account-Kit package.
  *
  * (c) Ibraheem Adeniyi <ibonly01@gmail.com>
  *

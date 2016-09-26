@@ -37,19 +37,9 @@ class FacebookAccountKit
 
     public function tokenExchangeEndPoint($code)
     {
-        return $this->tokenUrl($code, $this->getFacebookAppID(), $this->getFacebookAppSecrete());
+        return $this->tokenUrl($code, $this->getFacebookAppID(), $this->getFacebookAppSecret());
     }
-
-    // public function doCurl($url)
-    // {
-    //     $ch = curl_init();
-    //     curl_setopt($ch, CURLOPT_URL, $url);
-    //     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    //     $data = json_decode(curl_exec($ch), true);
-    //     curl_close($ch);
-    //     return $data;
-    // }
-
+    
     public function getData($code)
     {
         $data = $this->$this->client->request('GET', $this->tokenExchangeEndPoint($code));

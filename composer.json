@@ -24,12 +24,12 @@
     },
     "require": {
         "php": ">=5.5.9",
-        "mockery/mockery": "^0.9.5",
         "illuminate/support": "5.2.*",
         "guzzlehttp/guzzle": "^6.2"
     },
     "require-dev": {
         "phpunit/phpunit" : "4.*",
+        "mockery/mockery": "^0.9.5",
         "scrutinizer/ocular": "~1.1",
         "satooshi/php-coveralls": "^1.0",
         "codeclimate/php-test-reporter": "dev-master",

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Laravel EtextMail package.
+ * This file is part of the Laravel Facebook Account-Kit package.
  *
  * (c) Adeniyi Ibraheem <ibonly01@gmail.com>
  *
