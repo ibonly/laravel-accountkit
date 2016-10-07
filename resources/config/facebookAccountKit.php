@@ -10,7 +10,7 @@
  */
 
 return [
-    'appId' => getenv('ACCOUNTKIT_APP_ID'),
+    'appId' => env('ACCOUNTKIT_APP_ID'),
 
-    'appSecret' => getenv('ACCOUNTKIT_APP_SECRET'),
+    'appSecret' => env('ACCOUNTKIT_APP_SECRET'),
 ];

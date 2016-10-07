@@ -52,6 +52,6 @@ class FacebookAccountKitServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['laravel-facebookAccountKit'];
+        return ['AccountKit'];
     }
 }
