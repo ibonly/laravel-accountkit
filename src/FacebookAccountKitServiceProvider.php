@@ -39,7 +39,7 @@ class FacebookAccountKitServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('laravel-facebookAccountKit', function() {
+        $this->app->singleton('AccountKit', function() {
 
             return new FacebookAccountKit;
 

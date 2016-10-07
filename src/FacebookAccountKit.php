@@ -25,12 +25,12 @@ class FacebookAccountKit
         return $this->accessTokenUrl.'?grant_type=authorization_code&code='.$code.'&access_token=AA|'.$appId.'|'.$appSecret;
     }
 
-    public function getFacebookAppID()
+    protected function getFacebookAppID()
     {
         return Config::get('facebookAccountKit.appId');
     }
 
-    public function getFacebookAppSecret()
+    protected function getFacebookAppSecret()
     {
         return Config::get('facebookAccountKit.appSecret');
     }
@@ -39,10 +39,11 @@ class FacebookAccountKit
     {
         return $this->tokenUrl($code, $this->getFacebookAppID(), $this->getFacebookAppSecret());
     }
-    
+
     public function getData($code)
     {
-        $data = $this->$this->client->request('GET', $this->tokenExchangeEndPoint($code));
+        $data = $this->client->request('GET', $this->tokenExchangeEndPoint($code));
+
         return json_decode($data->getBody());
     }
 
@@ -68,7 +69,7 @@ class FacebookAccountKit
 
     public function data()
     {
-        return $this->$this->client->request('GET', $this->meEndPoint());
+        return $this->client->request('GET', $this->meEndPoint());
     }
 
     public function getPhone()
