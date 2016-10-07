@@ -3,4 +3,8 @@
 composer require ibonly/facebook-account-kit
 
 
-php artisan vendor:publish --provider="Ibonly\FacebookAccountKit\FacebookAccountKitServiceProvider"
+php artisan vendor:publish
+
+##How to use
+> Use composer to Install
+> Register the ServiceProvider - "Ibonly\FacebookAccountKit\FacebookAccountKitServiceProvider"

@@ -30,8 +30,8 @@ class FacebookAccountKitServiceProvider extends ServiceProvider
         $config = realpath(__DIR__ . '/../resources/config/facebookAccountKit.php');
 
         $this->publishes([
-            $config => config_path('facebookAccountKit.php')
-        ]);
+            $config => config_path('AccountKit.php')
+        ], 'config');
     }
 
     /**
