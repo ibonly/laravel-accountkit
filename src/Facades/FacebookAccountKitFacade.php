@@ -8,6 +8,6 @@ class FacebookAccountKitFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'laravel-facebookAccountKit';
+        return 'AccountKit';
     }
 }
