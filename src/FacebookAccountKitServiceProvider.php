@@ -29,9 +29,15 @@ class FacebookAccountKitServiceProvider extends ServiceProvider
     {
         $config = realpath(__DIR__ . '/../resources/config/facebookAccountKit.php');
 
+        $js = realpath(__DIR__ . '/../resources/config/accountkit.js');
+
         $this->publishes([
-            $config => config_path('facebookAccountKit.php')
-        ]);
+            $config => config_path('AccountKit.php')
+        ], 'config');
+
+        $this->publishes([
+            $js => config_path('accountkit.js')
+        ], 'public/js/');
     }
 
     /**
@@ -39,7 +45,7 @@ class FacebookAccountKitServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('laravel-facebookAccountKit', function() {
+        $this->app->singleton('AccountKit', function() {
 
             return new FacebookAccountKit;
 
@@ -52,6 +58,6 @@ class FacebookAccountKitServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['laravel-facebookAccountKit'];
+        return ['AccountKit'];
     }
 }
