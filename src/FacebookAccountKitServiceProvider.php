@@ -36,8 +36,8 @@ class FacebookAccountKitServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->publishes([
-            $js => config_path('accountkit.js')
-        ], 'public/js/');
+            $js => public_path('public/js/accountkit.js')
+        ], 'public');
     }
 
     /**
