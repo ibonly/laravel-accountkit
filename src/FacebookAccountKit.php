@@ -62,9 +62,9 @@ class FacebookAccountKit
         return $this->getData($code)['token_refresh_interval_sec'];
     }
 
-    public function meEndPoint()
+    public function meEndPoint($code)
     {
-        return $this->meTokenUrl.''.$this->getAccessToken();
+        return $this->meTokenUrl.''.$this->getAccessToken($code);
     }
 
     public function data()
