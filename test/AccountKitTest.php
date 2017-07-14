@@ -28,6 +28,7 @@ class AccountKitTest extends PHPUnit_Framework_TestCase
     public function receiveAndReturn($assert, $expectedType, $receive, $return)
     {
         $value = $this->accountkit->shouldReceive($receive)->andReturn($return);
+
         $this->$assert($expectedType, gettype($value));
     }
 

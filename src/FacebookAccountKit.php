@@ -20,7 +20,7 @@ class FacebookAccountKit
         $this->meTokenUrl = 'https://graph.accountkit.com/v1.0/me?access_token=';
     }
 
-    public function tokenUrl($code, $appId, $appSecret)
+    protected function tokenUrl($code, $appId, $appSecret)
     {
         return $this->accessTokenUrl.'?grant_type=authorization_code&code='.$code.'&access_token=AA|'.$appId.'|'.$appSecret;
     }
@@ -35,7 +35,7 @@ class FacebookAccountKit
         return Config::get('facebookAccountKit.appSecret');
     }
 
-    public function tokenExchangeEndPoint($code)
+    protected function tokenExchangeEndPoint($code)
     {
         return $this->tokenUrl($code, $this->getFacebookAppID(), $this->getFacebookAppSecret());
     }
@@ -62,9 +62,9 @@ class FacebookAccountKit
         return $this->getData($code)['token_refresh_interval_sec'];
     }
 
-    public function meEndPoint()
+    public function meEndPoint($code)
     {
-        return $this->meTokenUrl.''.$this->getAccessToken();
+        return $this->meTokenUrl.''.$this->getAccessToken($code);
     }
 
     public function data()
