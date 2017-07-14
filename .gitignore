@@ -1,3 +1,4 @@
 /.phpintel/
 /vendor
 /build
+.idea/
