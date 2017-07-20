@@ -28,17 +28,17 @@ class AccountKit
 
     private function getFacebookAppID()
     {
-        return Config::get('AccountKit.appId');
+        return Config::get('accountKit.appId');
     }
 
     private function getFacebookAppSecret()
     {
-        return Config::get('AccountKit.appSecret');
+        return Config::get('accountKit.appSecret');
     }
 
     private function getVersion()
     {
-        return Config::get('AccountKit.version');
+        return Config::get('accountKit.version');
     }
 
     private function tokenExchangeEndPoint($code)

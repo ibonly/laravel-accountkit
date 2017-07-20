@@ -35,7 +35,6 @@ function smsLogin() {
     loginCallback
   );
 }
-
 // email form submission handler
 function emailLogin() {
   var emailAddress = document.getElementById("email").value;

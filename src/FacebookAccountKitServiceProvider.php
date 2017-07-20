@@ -27,7 +27,7 @@ class FacebookAccountKitServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $config = realpath(__DIR__ . '/../resources/config/facebookAccountKit.php');
+        $config = realpath(__DIR__ . '/../resources/config/accountKit.php');
 
         $js = realpath(__DIR__ . '/../resources/config/accountkit.js');
 
