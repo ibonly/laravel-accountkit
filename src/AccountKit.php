@@ -4,14 +4,27 @@ namespace Ibonly\FacebookAccountKit;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Config;
-use GuzzleHttp\Exception\RequestException;
 
 class AccountKit
 {
+    /**
+     * @var \GuzzleHttp\Client HttpClient
+     */
     protected $client;
-    protected $tokenUrl;
+
+    /**
+     * @var string
+     */
+    protected $accessTokenUrl;
+
+    /**
+     * @var string
+     */
     protected $meTokenUrl;
 
+    /**
+     * AccountKit constructor.
+     */
     public function __construct()
     {
         $this->client = new Client();
@@ -19,33 +32,59 @@ class AccountKit
         $this->meTokenUrl = 'https://graph.accountkit.com/v1.1/me?access_token=';
     }
 
+    /**
+     * Set Token Url
+     *
+     * @param string $code
+     * @param string $appId
+     * @param string $appSecret
+     *
+     * @return string
+     */
     private function tokenUrl($code, $appId, $appSecret)
     {
-        $url = $this->accessTokenUrl.'?grant_type=authorization_code&code='.$code.'&access_token=AA|'.$appId.'|'.$appSecret;
-
-        return $url;
+        return $this->accessTokenUrl.'?grant_type=authorization_code&code='.$code.'&access_token=AA|'.$appId.'|'.$appSecret;
     }
 
+    /**
+     * Get App Id
+     *
+     * @return string
+     */
     private function getFacebookAppID()
     {
         return Config::get('accountKit.appId');
     }
 
+    /**
+     * Get App Secret
+     *
+     * @return string
+     */
     private function getFacebookAppSecret()
     {
         return Config::get('accountKit.appSecret');
     }
 
-    private function getVersion()
-    {
-        return Config::get('accountKit.version');
-    }
-
+    /**
+     * Set Token endpoint
+     *
+     * @param string $code
+     *
+     * @return string
+     */
     private function tokenExchangeEndPoint($code)
     {
         return $this->tokenUrl($code, $this->getFacebookAppID(), $this->getFacebookAppSecret());
     }
 
+    /**
+     * Make Request To AccountKit
+     *
+     * @param string $url
+     *
+     * @return mixed
+     */
     private function getContentBody($url)
     {
         $data = $this->client->request('GET', $url);
@@ -53,16 +92,37 @@ class AccountKit
         return json_decode($data->getBody());
     }
 
+    /**
+     * Get Access token
+     *
+     * @param string $code
+     *
+     * @return string
+     */
     private function getAccessToken($code)
     {
         return $this->getData($code)->access_token;
     }
 
+    /**
+     * Set User Token Endpoint
+     *
+     * @param string $code
+     *
+     * @return string
+     */
     private function meEndPoint($code)
     {
-        return $this->meTokenUrl.''.$this->getAccessToken($code);
+        return $this->meTokenUrl . '' . $this->getAccessToken($code);
     }
 
+    /**
+     * Get User Data
+     *
+     * @param string $code
+     *
+     * @return mixed
+     */
     public function getData($code)
     {
         $url = $this->tokenExchangeEndPoint($code);
@@ -70,6 +130,13 @@ class AccountKit
         return $this->getContentBody($url);
     }
 
+    /**
+     * Get Returned Data
+     *
+     * @param string $code
+     *
+     * @return mixed
+     */
     public function data($code)
     {
         return $this->getContentBody($this->meEndPoint($code));

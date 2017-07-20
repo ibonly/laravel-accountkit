@@ -8,6 +8,10 @@
         {
             "name": "Ibraheem Adeniyi",
             "email": "ibonly01@gmail.com"
+        },
+        {
+            "name": "Surajudeen Akande",
+            "email": "surajudeen.akande@andela.com"
         }
     ],
     "autoload": {

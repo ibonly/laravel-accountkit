@@ -4,16 +4,36 @@ namespace Ibonly\FacebookAccountKit;
 
 class FacebookAccountKit extends AccountKit
 {
+    /**
+     * Get User Id
+     *
+     * @param string $code
+     *
+     * @return mixed
+     */
     public function getUserId($code)
     {
         return $this->getData($code)['id'];
     }
 
+    /**
+     * Get App Token
+     *
+     * @param string $code
+     *
+     * @return mixed
+     */
     public function getAppToken($code)
     {
         return $this->getData($code);
     }
 
+    /**
+     * Get All User Data
+     *
+     * @param string $code
+     * @return array
+     */
     public function accountKitData($code)
     {
         $data = $this->data($code);
