@@ -14,24 +14,24 @@ class FacebookAccountKit extends AccountKit
         return $this->getData($code)->token_refresh_interval_sec;
     }
 
-    public function kitDetails($code)
+    public function facebookAccountKit($code)
     {
-        $data = $this->data($code);
+        $accountKitData = $this->data($code);
 
-        $val = [
-            'id' => $data->id,
+        $output = [
+            'id' => $accountKitData->id,
             'phoneNumber' => '',
             'email' => '',
         ];
 
-        if (array_key_exists('phone', $data)) {
-            $val['phoneNumber'] = $data->phone->number ?? null;
+        if (array_key_exists('phone', $accountKitData)) {
+            $output['phoneNumber'] = $accountKitData->phone->number ?? null;
         }
-
+        
         if (array_key_exists('email', $data)) {
-            $val['email'] = $data->email->address ?? null;
+            $output['email'] = $data->email->address ?? null;
         }
 
-        return $val;
+        return $output;
     }
 }
