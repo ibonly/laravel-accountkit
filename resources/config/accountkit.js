@@ -27,14 +27,15 @@ function loginCallback(response) {
 
 // phone form submission handler
 function smsLogin() {
-  var countryCode = document.getElementById('country').value;
-  var phoneNumber = document.getElementById('phone').value;
+  var countryCode = document.getElementById('country_code').value;
+  var phoneNumber = document.getElementById('phone_number').value;
   AccountKit.login(
     'PHONE',
     {countryCode: countryCode, phoneNumber: phoneNumber},
     loginCallback
   );
 }
+
 // email form submission handler
 function emailLogin() {
   var emailAddress = document.getElementById("email").value;

@@ -32,11 +32,11 @@ class FacebookAccountKitServiceProvider extends ServiceProvider
         $js = realpath(__DIR__ . '/../resources/config/accountkit.js');
 
         $this->publishes([
-            $config => config_path('AccountKit.php')
+            $config => config_path('accountKit.php')
         ], 'config');
 
         $this->publishes([
-            $js => public_path('public/js/accountkit.js')
+            $js => public_path('js/accountkit.js')
         ], 'public');
     }
 
