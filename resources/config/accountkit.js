@@ -27,8 +27,8 @@ function loginCallback(response) {
 
 // phone form submission handler
 function smsLogin() {
-  var countryCode = document.getElementById('country_code').value;
-  var phoneNumber = document.getElementById('phone_number').value;
+  var countryCode = document.getElementById('country').value;
+  var phoneNumber = document.getElementById('phone').value;
   AccountKit.login(
     'PHONE',
     {countryCode: countryCode, phoneNumber: phoneNumber},

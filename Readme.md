@@ -1,4 +1,4 @@
-*Laravel Facebook Account Kit
+##Laravel Facebook Account Kit
 
 composer require ibonly/facebook-account-kit
 
