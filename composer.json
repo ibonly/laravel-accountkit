@@ -1,5 +1,5 @@
 {
-    "name": "ibonly/facebook-account-kit",
+    "name": "ibonly/laravel-accountkit",
     "description": "Two factor authentication using facebook account kit",
     "keywords": ["php","github", "laravel", "facebook", "Open Source", "login", "register", "accountkit", "account kit", "facebook account kit", "laravel facebook account kit", "laravel-accountkit"],
     "license": "MIT",
