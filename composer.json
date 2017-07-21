@@ -38,5 +38,10 @@
         "satooshi/php-coveralls": "^1.0",
         "codeclimate/php-test-reporter": "dev-master",
         "phpunit/phpcov": "2.*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan vendor:publish"
+        ]
     }
 }
