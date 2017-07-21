@@ -1,10 +1,10 @@
-#Laravel Facebook Account Kit
+# Laravel Facebook Account Kit
 A simple package to make Two-Factor Authentication possible in Laravel using [Facebook's Account Kit](https://developers.facebook.com/docs/accountkit). 
 
 See Example [Here](lagosworkshop.herokuapp.com).
 
 
-##Installation
+## Installation
 To use this package in a Laravel Project, install via [Composer](https://getcomposer.org/)
 ```bash
 $ composer require ibonly/facebook-account-kit
