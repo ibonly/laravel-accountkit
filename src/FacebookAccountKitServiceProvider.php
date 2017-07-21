@@ -1,5 +1,4 @@
 <?php
-
 /*
  * This file is part of the Laravel Facebook Account-Kit package.
  *
@@ -49,7 +48,6 @@ class FacebookAccountKitServiceProvider extends ServiceProvider
         $this->app->singleton('AccountKit', function() {
 
             return new FacebookAccountKit;
-
         });
     }
 
