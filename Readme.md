@@ -1,9 +1,9 @@
 # Laravel Facebook Account Kit
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/andela-sakande/PotatoORM/blob/master/LICENSE)
 
-A simple package to make Password-less Login possible in Laravel using [Facebook's Account Kit](https://developers.facebook.com/docs/accountkit). 
+A simple package to make Password-less Login possible in Laravel using [Facebook's Account Kit](https://developers.facebook.com/docs/accountkit).
 
-See Example [Here](lagosworkshop.herokuapp.com).
+See Example [Here](https://lagosworkshop.herokuapp.com).
 
 ## Requirements
 >php 7.0+
@@ -22,7 +22,7 @@ Register the package to the [Service Provider](https://laravel.com/docs/5.4/prov
 'providers' => [
     ...
     Ibonly\FacebookAccountKit\FacebookAccountKitServiceProvider::class,
-], 
+],
 
 'aliases' => [
     ...
@@ -90,7 +90,7 @@ Ensure your form has `csrf_token` , hidden input `code` along with email and pho
 <input type="hidden" name="code" id="code" />
 ```
 
-## Testing 
+## Testing
 
 ``` bash
 $ vendor/bin/phpunit test
