@@ -15,7 +15,7 @@ See Example [Here](https://lagosworkshop.herokuapp.com).
 ## Installation
 To use this package in a Laravel Project, install via [Composer](https://getcomposer.org/)
 ```bash
-$ composer require ibonly/facebook-account-kit
+$ composer require ibonly/laravel-accountkit
 ```
 Register the package to the [Service Provider](https://laravel.com/docs/5.4/providers) in the `config/app.php` file:
 ```php
