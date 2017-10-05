@@ -36,8 +36,8 @@ class AccountKit
     public function __construct()
     {
         $this->client = new Client();
-        $this->accessTokenUrl = 'https://graph.accountkit.com/v1.2/access_token';
-        $this->meTokenUrl = 'https://graph.accountkit.com/v1.2/me?access_token=';
+        $this->accessTokenUrl = 'https://graph.accountkit.com/v1.1/access_token';
+        $this->meTokenUrl = 'https://graph.accountkit.com/v1.1/me?access_token=';
     }
 
     /**
