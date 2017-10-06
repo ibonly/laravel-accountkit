@@ -1,5 +1,13 @@
 <?php
-
+/*
+ * This file is part of the Laravel Facebook Account-Kit package.
+ *
+ * (c) Adeniyi Ibraheem <ibonly01@gmail.com>
+ * (c) Surajudeen AKande <surajudeen.akande@andela.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 namespace Ibonly\FacebookAccountKit;
 
 use GuzzleHttp\Client;
@@ -93,6 +101,20 @@ class AccountKit
     }
 
     /**
+     * Get User Data
+     *
+     * @param string $code
+     *
+     * @return mixed
+     */
+    private function getData($code)
+    {
+        $url = $this->tokenExchangeEndPoint($code);
+
+        return $this->getContentBody($url);
+    }
+
+    /**
      * Get Access token
      *
      * @param string $code
@@ -114,20 +136,6 @@ class AccountKit
     private function meEndPoint($code)
     {
         return $this->meTokenUrl . '' . $this->getAccessToken($code);
-    }
-
-    /**
-     * Get User Data
-     *
-     * @param string $code
-     *
-     * @return mixed
-     */
-    public function getData($code)
-    {
-        $url = $this->tokenExchangeEndPoint($code);
-
-        return $this->getContentBody($url);
     }
 
     /**
