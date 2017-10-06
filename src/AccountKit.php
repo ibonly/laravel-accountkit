@@ -101,6 +101,20 @@ class AccountKit
     }
 
     /**
+     * Get User Data
+     *
+     * @param string $code
+     *
+     * @return mixed
+     */
+    private function getData($code)
+    {
+        $url = $this->tokenExchangeEndPoint($code);
+
+        return $this->getContentBody($url);
+    }
+
+    /**
      * Get Access token
      *
      * @param string $code
@@ -122,20 +136,6 @@ class AccountKit
     private function meEndPoint($code)
     {
         return $this->meTokenUrl . '' . $this->getAccessToken($code);
-    }
-
-    /**
-     * Get User Data
-     *
-     * @param string $code
-     *
-     * @return mixed
-     */
-    public function getData($code)
-    {
-        $url = $this->tokenExchangeEndPoint($code);
-
-        return $this->getContentBody($url);
     }
 
     /**
