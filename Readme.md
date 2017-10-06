@@ -71,9 +71,7 @@ The above return an array similar to this:
 [▼
   "id" => "1802782826673865"
   "phoneNumber" => "+234XXXXXXXXXXX",
-  "email" => "",
-  "token" => "EMAWdyari7DZAhNVQtzZCmOVZBGhqCugyVZA4s2Bvii4OBWAibVNwNAKvtF1VxoLZA0iyZB595wgbssjzTlYsMBBzUw73Caenu7FHFb3GlN24RHGGEsUWMzAXJJPQjSUBZCO5X9NvuyIoZCFBYrFVNd2If0s5BzO",
-  "timeInterval" => 2592000
+  "email" => ""
 ]
 ```
 
