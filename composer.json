@@ -42,6 +42,9 @@
     "scripts": {
         "post-install-cmd": [
             "php artisan vendor:publish"
+        ],
+        "test": [
+            "phpunit test"
         ]
     }
 }
