@@ -90,8 +90,9 @@ Ensure your form has `csrf_token` , hidden input `code` along with email and pho
 
 ## Testing
 
-``` bash
-$ vendor/bin/phpunit test
+Run any of the following commands in your terminal.
+```bash
+$ composer test
 ```
 
 ## Credits
