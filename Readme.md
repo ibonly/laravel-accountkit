@@ -32,7 +32,7 @@ Register the package to the [Service Provider](https://laravel.com/docs/5.4/prov
 You can make of some assets provided in this package to speed up your implementation:
 run
 ```bash
-$ php artisan vendor:publish
+$ php artisan vendor:publish --provider="Ibonly\FacebookAccountKit\FacebookAccountKitServiceProvider"
 ```
 
 ## Usage
