@@ -3,7 +3,7 @@
 
 A simple package to make Password-less Login possible in Laravel using [Facebook's Account Kit](https://developers.facebook.com/docs/accountkit).
 
-See Example [Here](https://lagosworkshop.herokuapp.com).
+See Example [Here](https://akantkit.herokuapp.com).
 
 ## Requirements
 >php 7.0+
