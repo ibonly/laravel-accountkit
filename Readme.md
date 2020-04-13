@@ -1,3 +1,5 @@
+# Account Kit services no longer available starting in March - [click here](https://developers.facebook.com/blog/post/2019/09/09/account-kit-services-no-longer-available-starting-march)
+
 # Laravel Facebook Account Kit
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/andela-sakande/PotatoORM/blob/master/LICENSE)
 
